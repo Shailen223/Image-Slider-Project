@@ -1,7 +1,7 @@
 const left = document.querySelector('.left');
 const right = document.querySelector('.right');
-const slider = document.querySelector('.slider');
 const images = document.querySelectorAll('.images');
+const slider = document.querySelector('.slider');
 console.log(images);
 const slideWidth = 800;
 let current = 1;
@@ -28,10 +28,8 @@ const nextslide = () => {
 
 left.addEventListener('click', () => {
   current > 1? prevslide() : lastslide();
-});
+})
 
 right.addEventListener('click', () => {
   current < images.length? nextslide() : firstslide();
 })
-
-console.log(left,"left",right)
