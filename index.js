@@ -7,29 +7,29 @@ const slideWidth = 800;
 let current = 1;
 
 const firstslide = () => {
-  slider.style.transform = 'translate(0)';
+  slider.style.transform = 'translate(0)'
   current = 1;
 }
 
 const lastslide = () => {
-  slider.style.transform = `translate(-${(images.length - 1) * 800}px)`;
+  slider.style.transform = `translateX(-${(images.length - 1) * 800}px)`;
   current = images.length;
 }
 
 const prevslide = () => {
-  slider.style.transform = `translate(-${(current - 2) * 800}px)`;
-    current--;
+  slider.style.transform = `translateX(-${(current - 2) * 800}px)`;
+  current--;
 }
 
 const nextslide = () => {
-  slider.style.transform = `translate(-${current * slideWidth}px)`;
-    current++;
+  slider.style.transform = `translateX(-${current * slideWidth}px)`;
+  current++;
 }
 
 left.addEventListener('click', () => {
-  current > 1? prevslide() : lastslide();
-})
+  current > 1? prevslide() : lastslide()
+});
 
 right.addEventListener('click', () => {
-  current < images.length? nextslide() : firstslide();
-})
+  current < images.length? nextslide() : firstslide()
+});
