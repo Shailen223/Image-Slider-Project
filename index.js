@@ -15,7 +15,7 @@ const nextslide = () => {
     slider.style.transform = 'translate(0)';
     current = 1;
   }
-  
+     
   const prevslide = () => {
     slider.style.transform = `translateX(-${(current - 2)*800}px)`;
       current--;
@@ -35,4 +35,3 @@ right.addEventListener('click', () => {
     current < images.length? nextslide() : firstslide();
 })
 
-console.log(left,'left',right)
